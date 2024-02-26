@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="addCart"
+    errors="1" failures="0" hostname="" id="" package="addCart" skipped="0"
+    tests="1" time="10.40" timestamp="">
+  
+    <testcase name="Verify that " classname="addCart" time="3.509" assertions="1">
+
+    
+    <error message="Unknown api method &#34;verifyTitle&#34;." type="error"><![CDATA[
+    Error: Unknown api method &#34;verifyTitle&#34;.
+    at Proxy.&lt;anonymous&gt; (/home/knoldus/Desktop/Amazon_nightwatch/node_modules/nightwatch/lib/api/index.js:158:19)
+    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Desktop/Amazon_nightwatch/test/addCart.js:30:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       Error
+   Unknown api method &#34;verifyTitle&#34;.
+
+    Error location:
+    /home/knoldus/Desktop/Amazon_nightwatch/test/addCart.js:30
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     28 |           }
+     29 | 
+     30 |         browser.assert.verifyTitle(&#34;Boat headphones&#34;); 
+     31 | 
+     32 |     });
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

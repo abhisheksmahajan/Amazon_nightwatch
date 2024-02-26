@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="searchProduct"
+    errors="0" failures="1" hostname="" id="" package="searchProduct" skipped="1"
+    tests="1" time="4.474" timestamp="">
+  
+    <testcase name="Verify that User should able to search Product" classname="searchProduct" time="1.130" assertions="1">  <failure message="Timed out while waiting for element &lt;#twotabsearchtextbox&gt; to be present for 1000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (1062ms)">    at Page.searchproduct (/home/knoldus/Desktop/knight/nightwatch/page-objects/amazon/Homepage.js:16:19)
+    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Desktop/knight/test/searchProduct.js:13:16)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+    
+    <testcase
+      name="Verify that User not should able to search Product Wrong product" classname="searchProduct">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
