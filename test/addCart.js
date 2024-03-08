@@ -15,19 +15,22 @@ describe('Add Cart', function() {
   
     it('Verify that ', async(browser)=> {
         ProductPage.clickonSearchproduct();
-        const originalWindow = await browser.window.getHandle();
-        const allWindows = await browser.window.getAllHandles();
-
-
-        for (const windowHandle of allWindows) {
-            if (windowHandle !== originalWindow) {
-              await browser.window.switchTo(windowHandle);
-              break;
-            }
-
-          }
-
-        browser.assert.verifyTitle("Boat headphones");
+        browser.windowHandles(function(result) {
+          const originalHandle = result.value[0];
+          const handle = result.value[1]; 
+          this.switchWindow(handle)
+           
+      })
+      browser.getTitle(function(title) {
+        console.log('Page title is: ' + title);
+      })
+      browser.assert.titleContains("POCO X2 (Atlantis Blue, 8GB RAM, 256GB Storage) : Amazon.in: Electronics")
+        browser.getTitle(function(title) {
+          console.log('Page title is: ' + title);
+        })
+        ProductPage.clickonAddcart()
+        .assert.element('@successfullyaddcart').visible
+        
 
     });
 

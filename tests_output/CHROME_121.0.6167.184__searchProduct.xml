@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="1"
-            tests="1">
+            tests="2">
 
   <testsuite name="searchProduct"
-    errors="0" failures="1" hostname="" id="" package="searchProduct" skipped="1"
-    tests="1" time="4.474" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="searchProduct" skipped="0"
+    tests="2" time="21.95" timestamp="">
   
-    <testcase name="Verify that User should able to search Product" classname="searchProduct" time="1.130" assertions="1">  <failure message="Timed out while waiting for element &lt;#twotabsearchtextbox&gt; to be present for 1000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (1062ms)">    at Page.searchproduct (/home/knoldus/Desktop/knight/nightwatch/page-objects/amazon/Homepage.js:16:19)
-    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Desktop/knight/test/searchProduct.js:13:16)</failure>
+    <testcase name="Verify that User should able to search Product" classname="searchProduct" time="3.247" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Verify that User not should able to search Product Wrong product" classname="searchProduct" time="7.118" assertions="2">
+
+      <failure message="Testing if element &lt;Element [name=@errorResult]&gt; contains text &#39;does not contain 999999999999&#39; in 5000ms - expected &#34;contains text &#39;does not contain 999999999999&#39;&#34; but got: &#34;does not contain &#39;does not contain 999999999999&#39;&#34; (5286ms)">    at Page.verifyresult (/home/knoldus/IdeaProjects/Amazon_nightwatch/nightwatch/page-objects/amazon/Homepage.js:10:15)
+    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/IdeaProjects/Amazon_nightwatch/test/searchProduct.js:23:10)</failure>
 
     
     </testcase>
@@ -18,13 +29,6 @@
 
     
 
-  
-    
-    <testcase
-      name="Verify that User not should able to search Product Wrong product" classname="searchProduct">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>

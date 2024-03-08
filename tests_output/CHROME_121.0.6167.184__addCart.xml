@@ -5,15 +5,26 @@
 
   <testsuite name="addCart"
     errors="1" failures="0" hostname="" id="" package="addCart" skipped="0"
-    tests="1" time="10.40" timestamp="">
+    tests="1" time="13.80" timestamp="">
   
-    <testcase name="Verify that " classname="addCart" time="3.509" assertions="1">
+    <testcase name="Verify that " classname="addCart" time="4.880" assertions="3">
 
     
-    <error message="Unknown api method &#34;verifyTitle&#34;." type="error"><![CDATA[
-    Error: Unknown api method &#34;verifyTitle&#34;.
-    at Proxy.&lt;anonymous&gt; (/home/knoldus/Desktop/Amazon_nightwatch/node_modules/nightwatch/lib/api/index.js:158:19)
-    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Desktop/Amazon_nightwatch/test/addCart.js:30:24)
+
+    
+
+    
+    <error message="Unknown api method &#34;element&#34;." type="error"><![CDATA[
+    Error: Unknown api method &#34;element&#34;.
+    at Proxy.&lt;anonymous&gt; (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/api/index.js:158:19)
+    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/IdeaProjects/Amazon_nightwatch/test/addCart.js:32:17)
+    at Context.call (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/context.js:515:35)
+    at TestCase.run (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/testcase.js:58:31)
+    at Runnable.__runFn (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/index.js:839:80)
+    at Runnable.run (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/runnable.js:126:21)
+    at TestSuite.executeRunnable (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/index.js:1000:49)
+    at TestSuite.handleRunnable (/home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/index.js:1015:33)
+    at /home/knoldus/IdeaProjects/Amazon_nightwatch/node_modules/nightwatch/lib/testsuite/index.js:839:21
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     ]]></error>
     
@@ -23,17 +34,17 @@
   
     <system-err>
        Error
-   Unknown api method &#34;verifyTitle&#34;.
+   Unknown api method &#34;element&#34;.
 
     Error location:
-    /home/knoldus/Desktop/Amazon_nightwatch/test/addCart.js:30
-    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-     28 |           }
-     29 | 
-     30 |         browser.assert.verifyTitle(&#34;Boat headphones&#34;); 
-     31 | 
-     32 |     });
-    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    /home/knoldus/IdeaProjects/Amazon_nightwatch/test/addCart.js:32
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     30 |         })
+     31 |         ProductPage.clickonAddcart()
+     32 |         .assert.element(&#39;@successfullyaddcart&#39;).visible 
+     33 |         
+     34 | 
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
     </system-err>
   

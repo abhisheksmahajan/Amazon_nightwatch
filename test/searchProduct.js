@@ -24,6 +24,6 @@ describe('Sreach Product', function() {
     });
   });
 
-  //const ProductPage= driver.page.amazon.ProductPage();
+  
  
   
