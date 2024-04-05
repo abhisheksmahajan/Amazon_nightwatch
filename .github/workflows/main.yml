@@ -1,6 +1,6 @@
 name: Nightwatch Tests
 
-on: 
+on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
@@ -29,4 +29,4 @@ jobs:
         run: sudo apt-get install xvfb
 
       - name: Run Nightwatch tests
-        run: xvfb-run --auto-servernum npm test --env chrome
+        run: xvfb-run --auto-servernum npm test -- --env chrome
