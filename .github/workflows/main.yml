@@ -24,8 +24,8 @@ jobs:
         cache: 'npm'
 
       - name: npm-install
-      run: npm ci
-    - run: sudo apt-get install xvfb
+      - run: npm ci
+      - run: sudo apt-get install xvfb
 
-    - name: Run Nightwatch tests
+      - name: Run Nightwatch tests
       run: xvfb-run --auto-servernum npm test -- --env chrome
