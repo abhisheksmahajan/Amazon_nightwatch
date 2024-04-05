@@ -1,0 +1,25 @@
+name: Nightwatch Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+   runs-on: ubuntu-latest
+   
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js $undefined
+      uses: actions/setup-node@v3
+      with:
+        node-version: $undefined
+        cache: 'npm'
+
+    - name: npm-install
+      run: npm ci
+    - run: sudo apt-get install xvfb
+
+    - name: Run Nightwatch tests
+      run: xvfb-run --auto-servernum npm test -- --env chrome
